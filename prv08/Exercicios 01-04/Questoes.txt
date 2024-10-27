@@ -1,0 +1,13 @@
+1 - Faça a leitura do nome de um aluno e as respectivas notas, 
+imprima a nota final e o conceito.
+ - Considere 2 avaliações
+
+2- Estenda o exercício anterior para fazer a leitura de vários 
+alunos
+
+3- Estenda o exercício anterior para que os dados dos alunos sejam 
+lidos a partir de um arquivo estilo csv (separados por vírgula).
+
+4-Estenda o exercício anterior para que as notas sejam 
+geradas aleatoriamente. Ao final todas as informações serão 
+gravadas em um novo arquivo csv

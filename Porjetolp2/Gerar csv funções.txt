@@ -1,0 +1,34 @@
+public static boolean gerarCSV(JTable tabela,
+            String caminho) {
+
+        try {
+
+            TableModel model = tabela.getModel();
+            FileWriter csv = new FileWriter(new File(caminho));
+
+            for (int i = 0; i < model.getColumnCount(); i++) {
+                csv.write(model.getColumnName(i) + ",");
+            }
+
+            csv.write("\n");
+
+            for (int i = 0; i < model.getRowCount(); i++) {
+                for (int j = 0; j < model.getColumnCount(); j++) {
+                    csv.write(model.getValueAt(i, j).toString() + ",");
+                }
+                csv.write("\n");
+            }
+
+            csv.close();
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+--botoes------------------------------------------------------------------------------
+
+gerarCSV(jtl_consultar_cliente, "./clientes.csv");
+	
+gerarCSV(jtl_consultar_cliente, "./instrutoresVeiculos.csv");
